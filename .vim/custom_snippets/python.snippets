@@ -1,0 +1,27 @@
+# Basic PyQt application
+snippet pyqtapp "Aplicación básica PyQt" b
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+
+import sys
+from PyQt5 import QtWidgets
+
+
+def main():
+	app = QtWidgets.QApplication(sys.argv)
+	window = QtWidgets.QMainWindow()
+	button = QtWidgets.QPushButton("Hello, PyQt!")
+	window.setCentralWidget(button)
+	window.show()
+	sys.exit(app.exec_())
+
+if __name__ == '__main__':
+	main()
+endsnippet
+
+# Basic print debug
+snippet pylog "Debug básico con print" b
+print('=' * 20)
+print(${1:variable})
+print('=' * 20)
+endsnippet

@@ -1,0 +1,40 @@
+// vim:ts=4:sw=4:et
+{
+    // floating_con with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 482,
+       "width": 344,
+       "x": 45,
+       "y": 574
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "user_on",
+            "geometry": {
+               "height": 460,
+               "width": 340,
+               "x": 45,
+               "y": 594
+            },
+            "name": "Telegram (1043)",
+            "percent": 1,
+            "swallows": [
+               {
+               // "class": "^telegram\\-desktop$",
+               // "instance": "^telegram\\-desktop$",
+               // "title": "^Telegram\\ \\(1043\\)$",
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

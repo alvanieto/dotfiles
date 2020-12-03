@@ -1,0 +1,42 @@
+[ui]
+username = ang
+ssh = ssh -C
+merge = kdiff3
+editor = vim
+
+[defaults]
+cdiff = -q
+
+[extensions]
+hgk=
+hgext.mq =
+color=
+hgext.convert =
+hgext.rebase =
+hgext.extdiff =
+shelve=
+progress =
+histedit =
+
+[extdiff]
+; hg vdiff -> lanza kdiff3
+cmd.vdiff = kdiff3
+cmd.cdiff = colordiff
+cmd.ddiff = diffuse
+opts.cdiff = -uprN
+opts.ddiff = -m 
+
+; Con vim
+cmd.vimdiff = qvim
+opts.vimdiff = -f '+next' '+execute "DirDiff" fnameescape(argv(0)) fnameescape(argv(1))'
+
+[merge-tools]
+kdiff3.args =--auto --L1 base --L2 local --L3 other $base $local $other -o $output
+kdiff3.gui=True
+
+
+[tortoisehg]
+ui.language = es
+editor = qvim
+vdiff = vimdiff
+authorcolor = True

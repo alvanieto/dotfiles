@@ -1,0 +1,1 @@
+/home/ang/proyectos/dotfiles/.vim

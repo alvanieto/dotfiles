@@ -1,0 +1,294 @@
+[$Version]
+update_info=kded.upd:kde3.0,mouse_cursor_theme.upd:kde3.4.99,kwin.upd:kde3.2Xinerama,kaccel.upd:kde3.3/r1
+
+[ColorEffects:Disabled]
+Color=112,111,110
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.5
+ContrastEffect=1
+IntensityAmount=0.05
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+Color=112,111,110
+ColorAmount=0.05
+ColorEffect=2
+ContrastAmount=0.2
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=224,223,222
+BackgroundNormal=181,182,190
+DecorationFocus=0,20,80
+DecorationHover=30,30,40
+ForegroundActive=0,81,140
+ForegroundInactive=0,60,100
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=0,0,60
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[Colors:Selection]
+BackgroundAlternate=62,138,204
+BackgroundNormal=65,143,212
+DecorationFocus=0,20,80
+DecorationHover=30,30,40
+ForegroundActive=0,81,140
+ForegroundInactive=0,80,115
+ForegroundLink=0,49,110
+ForegroundNegative=156,14,14
+ForegroundNeutral=255,221,0
+ForegroundNormal=245,245,245
+ForegroundPositive=128,255,128
+ForegroundVisited=69,40,134
+
+[Colors:Tooltip]
+BackgroundAlternate=196,224,255
+BackgroundNormal=220,220,220
+DecorationFocus=0,20,80
+DecorationHover=30,30,40
+ForegroundActive=0,81,140
+ForegroundInactive=0,60,100
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=20,19,18
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[Colors:View]
+BackgroundAlternate=248,247,246
+BackgroundNormal=240,240,240
+DecorationFocus=0,20,80
+DecorationHover=30,30,40
+ForegroundActive=0,81,140
+ForegroundInactive=0,60,100
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=20,19,18
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[Colors:Window]
+BackgroundAlternate=218,217,216
+BackgroundNormal=182,185,190
+DecorationFocus=0,20,80
+DecorationHover=30,30,40
+ForegroundActive=0,81,140
+ForegroundInactive=0,60,100
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=30,30,40
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[DesktopIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=togamma
+ActiveSemiTransparent=false
+ActiveValue=0.7
+Animated=true
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=48
+
+[DialogIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=32
+
+[DirSelect Dialog]
+DirSelectDialog Size=1052,632
+History Items[$e]=file://$HOME/Downloads,file://$HOME/Downloads/stardict-ger_eng-2.4.2,file://$HOME/Downloads/ger_eng,file://$HOME/mp3,file://$HOME/mp3/El Mejor Dance De Los 90s-3,file://$HOME/mp3/El Mejor Dance De Los 90s-2,file://$HOME/mp3/El Mejor Dance De Los 90s-1,file://$HOME/tmp/basement/datos/NOTAS,file://$HOME/tmp/basement/datos/notas,file://$HOME/tmp/basement/datos/kap,file://$HOME/tmp/basement/datos/KAP,file://$HOME/tmp/basement/datos/DOC,file://$HOME/tmp/basement/datos/doc,file://$HOME/tmp/NEX,file://$HOME/proyectos/basement/notas/nex,file://$HOME/mp3/Baile 90,file://$HOME/mp3/Erasure 40 hits,file://$HOME/mp3/SEGUNDA FUNDACION-1993-1994-Segunda Fundación (Alicante),file://$HOME/mp3/Géminis niños del brasil,file://$HOME/mp3/OBK-2OBK-2011/CD2,file://$HOME/mp3/OBK-2OBK-2011/CD1,file://$HOME/mp3/Yazoo - Reconnected Live (2010)_mp3,file://$HOME/tmp/podofo-0.9.1/podofo/base,file://$HOME/tmp/podofo-0.9.1,file:///media/STONE PLUS/Stockholm Stadium - Sweden - CD2,file://$HOME/mp3/Berliner Platz 1,file://$HOME/mp3/aleman,file://$HOME/mp3/BERLIN-1993-Cuando el cielo deje de existir,file://$HOME/mp3/Luxury Beat - Mensaje Bailable,file://$HOME/mp3/SANTUARIO-1993-Santuario,file://$HOME/mp3/DC3-1992-Tu generación,file://$HOME/mp3/EXODO-1992-Factor Humano,file://$HOME/Downloads/Luxury Beat - Mensaje Bailable,file://$HOME/Downloads/EXODO-1992-Factor Humano,file:///media/STONE PLUS/SANTUARIO-1993-Santuario,file:///media/STONE PLUS/BERLIN-1993-Cuando el cielo deje de existir,file://$HOME/proyectos/podofo_s002htz,file://$HOME/proyectos/podofo,file://$HOME/proyectos/podofo/src,file://$HOME/podofo/src,file:///media/Datos/tmp/jpeg/include,file:///media/Datos/tmp/freetype-2.3.9/include,file:///media/Datos/tmp/zlib-1.2.4,file:///media/Datos/tmp/podofo_trunk,file://$HOME/tmp/podofo,file:///usr/i486-mingw32,file://$HOME/tmp/podofo-0.8.0,file://$HOME/tmp/podofo_trunk/gcc,file://$HOME/tmp/podofo/gcc,file://$HOME/tmp/podofo/src
+
+[Emoticons]
+emoticonsTheme=kde4
+
+[General]
+BrowserApplication[$e]=!/usr/bin/chromium
+ColorScheme=LuckyEyes
+XftAntialias=true
+XftHintStyle=hintmedium
+XftSubPixel=rgb
+desktopFont=Verdana,7,-1,5,50,0,0,0,0,0
+fixed=Cousine,8,-1,5,50,0,0,0,0,0
+font=DejaVu Sans,7,-1,5,50,0,0,0,0,0
+menuFont=Verdana,7,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=DejaVu Sans,7,-1,5,50,0,0,0,0,0
+taskbarFont=Verdana,7,-1,5,50,0,0,0,0,0
+toolBarFont=Verdana,7,-1,5,50,0,0,0,0,0
+widgetStyle=qtcurve
+
+[Icons]
+Theme=oxygen
+
+[KDE]
+AutoSelectDelay=-1
+ChangeCursor=true
+DoubleClickInterval=400
+ShowDeleteCommand=false
+ShowIconsInMenuItems=true
+ShowIconsOnPushButtons=true
+SingleClick=true
+StartDragDist=4
+StartDragTime=500
+WheelScrollLines=3
+contrast=7
+
+[KDE-Global GUI Settings]
+GraphicEffectsLevel=0
+
+[KFileDialog Settings]
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=0
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Previews=false
+Recent URLs[$e]=$HOME/utils/wallpapers/sergio/,$HOME/proyectos/tarictds/,$HOME/mp3/,$HOME/utils/wallpapers/,$HOME/Downloads/,$HOME/proyectos/,$HOME/.wine/drive_c/duataric/Docs_PDF/
+Show Bookmarks=false
+Show Full Path=false
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=146
+View Style=Simple
+
+[KShortcutsDialog Settings]
+Dialog Size=939,639
+
+[Locale]
+Country=es
+Language=de:es
+
+[MainToolbarIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=22
+
+[Notification Messages]
+:kmail_no_subject_specified=true
+
+[PanelIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=togamma
+ActiveSemiTransparent=false
+ActiveValue=0.7
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=32
+
+[PreviewSettings]
+MaximumRemoteSize=0
+MaximumSize=5242880
+UseFileThumbnails=true
+
+[SmallIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=16
+
+[Toolbar style]
+ToolButtonStyle=NoText
+ToolButtonStyleOtherToolbars=TextBesideIcon
+
+[ToolbarIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=22
+
+[WM]
+activeBackground=80,80,100
+activeBlend=255,255,255
+activeFont=DejaVu LGC Sans Mono,7,-1,5,50,0,0,0,0,0
+activeForeground=250,250,250
+inactiveBackground=140,142,152
+inactiveBlend=20,19,18
+inactiveForeground=220,220,220

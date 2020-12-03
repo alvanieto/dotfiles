@@ -1,0 +1,30 @@
+[user]
+    email = alvaro@doofinder.com
+	name = Álvaro Nieto
+
+[merge]
+	tool = kdiff3
+
+[mergetool "kdiff3"]
+    cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" --output "$MERGED"
+    trustExitCode = false
+
+[mergetool "vimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[diff]
+	tool = diffuse
+
+[difftool]
+    prompt = false
+
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+[difftool "diffuse"]
+    cmd = diffuse "$LOCAL" "$REMOTE"
+
+[core]
+	editor = nvim
+    excludesfile = ~/.gitignore_global
+	attributesfile = /home/ang/.gitattributes
