@@ -214,11 +214,11 @@ new_window 1pixel
 default_border pixel 1
 
 # De momento desactivado por mal rendimiento
-# exec /usr/bin/compton --config ~/.config/i3/compton.conf -b
 exec --no-startup-id feh --bg-scale ~/utils/arch.png
 exec --no-startup-id i3-msg 'workspace $work_www; exec firefox'
 exec --no-startup-id i3-msg 'workspace $work_mail; exec thunderbird'
 exec --no-startup-id i3-msg 'workspace $work_mail; exec slack'
+exec --no-startup-id picom -b
 
 # Multimedia Keys
 # increase volume
