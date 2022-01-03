@@ -5,9 +5,10 @@
 set -o vi
 
 # Mis atajos
-alias ls='ls --color=auto'
+alias ls='exa'
+#alias ls='ls --color=auto'
 alias ll='ls -l'
-alias lt='ll -rt'
+alias lt='ll -snew'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -36,7 +37,8 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\[\033[01;37m\]\$?\$(parse_git_branch) \$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi) \[\033[01;30m\] \W \[\033[01;37m\]>\[\033[00m\] "
+PS1="\[\033[01;37m\]\$?\$(parse_git_branch) \$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi) \[\033[01;37m\] \W \[\033[01;37m\]>\[\033[00m\] "
+#eval "$(starship init bash)"
 
 # PATH
 export PATH=/usr/lib64/ccache:$PATH:.:$HOME/utils:/sbin:~/.yarn/bin:~/.local/bin
@@ -54,7 +56,7 @@ xhost + &>/dev/null
 
 # Para virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.9
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.10
 source /usr/bin/virtualenvwrapper.sh
 
 # export PATH=/home/ang/.gem/ruby/2.1.0/bin:$PATH
@@ -90,9 +92,11 @@ source /usr/share/nvm/init-nvm.sh
 export AWS_REGION='eu-west-1'
 eval $(keychain  --ignore-missing --eval --quiet id_rsa_bastion id_rsa dfSrvKey)
 
-. /opt/asdf-vm/asdf.sh
+#. /opt/asdf-vm/asdf.sh
 
 # . /opt/asdf-vm/completions/asdf.bash
 
 # Refresh when recreate the container
 export SIWAPP_TOKEN=d824a2f1f81b4f2bb6aedebbebd5ea44
+
+[ -f /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh ] && source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh

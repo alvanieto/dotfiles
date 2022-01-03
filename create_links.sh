@@ -20,8 +20,8 @@ ln -s ~/proyectos/dotfiles/.config/picom.conf ~/.config/picom.conf
 mkdir -p ~/.config/nvim
 ln -s ~/proyectos/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 
-mkdir -p ~/.config/termite
-ln -s ~/proyectos/dotfiles/.config/termite/config ~/.config/termite/config
+mkdir -p ~/.config/kitty
+ln -s ~/proyectos/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 mkdir -p ~/utils
 ln -s ~/proyectos/dotfiles/utils/diff_one_file.sh ~/utils/diff_one_file.sh
