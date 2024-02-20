@@ -7,7 +7,7 @@ do
     ln -s ~/proyectos/dotfiles/${file} ~/${file}
 done
 
-FILES="config i3status.conf"
+FILES="config i3status.conf config.toml"
 
 mkdir -p ~/.config/i3
 for file in ${FILES}
@@ -20,8 +20,11 @@ ln -s ~/proyectos/dotfiles/.config/picom.conf ~/.config/picom.conf
 mkdir -p ~/.config/nvim
 ln -s ~/proyectos/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 
-mkdir -p ~/.config/kitty
-ln -s ~/proyectos/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+mkdir -p ~/.config/lvim
+ln -s ~/proyectos/dotfiles/.config/lvim/config.lua ~/.config/lvim/config.lua
+
+mkdir -p ~/.config/alacritty
+ln -s ~/proyectos/dotfiles/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 mkdir -p ~/utils
 ln -s ~/proyectos/dotfiles/utils/diff_one_file.sh ~/utils/diff_one_file.sh

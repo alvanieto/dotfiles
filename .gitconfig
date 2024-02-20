@@ -6,7 +6,7 @@
 	tool = meld
 
 [mergetool "meld"]
-    cmd = $HOME/utils/meld/bin/meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 
 [mergetool "kdiff3"]
     cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" --output "$MERGED"
@@ -22,7 +22,7 @@
     prompt = false
 
 [difftool "meld"]
-    cmd = $HOME/utils/meld/bin/meld "$LOCAL" "$REMOTE"
+    cmd = meld "$LOCAL" "$REMOTE"
 
 [difftool "diffuse"]
     cmd = diffuse "$LOCAL" "$REMOTE"

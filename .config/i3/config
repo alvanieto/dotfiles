@@ -21,7 +21,7 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # Font config for 4K monitor
-font pango:Source Code Pro, Awesome 8
+font pango:Source Code Pro, Awesome 10
 # font pango:Source Code Pro, Awesome 7
 # font pango:Misc Tamsyn, Awesome 10
 
@@ -47,25 +47,25 @@ set $work_music "5 "
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec alacritty
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
+
+# Take a screenshot
+bindsym --release shift+Print exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec rofi -show run -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Misc Tamsyn 11" -theme "Arc-Dark"
-bindsym $mod+d exec rofi -show run -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Source Code Pro 12" -theme "Arc-Dark"
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Switch between one or two screens
 bindsym $mod+Shift+b exec autorandr both
 bindsym $mod+Shift+d exec autorandr desktop
 
-bindsym $mod+Sys_Req exec flameshot gui
+# start dmenu (a program launcher)
+# bindsym $mod+d exec rofi -show run -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Misc Tamsyn 11" -theme "Arc-Dark"
+bindsym $mod+d exec rofi -show run -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Source Code Pro 20" -theme "Arc-Dark" -modi "clipboard:greenclip print" -show clipboard
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -181,16 +181,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-    #font pango:Source Code Pro, FontAwesome 9
-    font pango:Source Code Pro, FontAwesome 6
+    font pango:Source Code Pro, FontAwesome 9
     position bottom
     status_command /usr/bin/i3status-rs ~/.config/i3/config.toml
     colors {
         separator #666666
-        background #000000
-        statusline #ffffff
+        background #222222
+        statusline #477AB3
         focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
+        active_workspace #477AB3 #477AB3 #ffffff
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
@@ -237,12 +236,13 @@ new_window 1pixel
 default_border pixel 1
 
 # De momento desactivado por mal rendimiento
+# exec /usr/bin/compton --config ~/.config/i3/compton.conf -b
 exec --no-startup-id feh --bg-scale ~/utils/arch.png
-exec --no-startup-id i3-msg 'workspace $work_www; exec firefox'
-exec --no-startup-id i3-msg 'workspace $work_mail; exec thunderbird'
-exec --no-startup-id i3-msg 'workspace $work_mail; exec slack'
-# exec --no-startup-id picom -b --experimental-backends
+exec --no-startup-id i3-msg 'workspace $work_www; exec microsoft-edge-stable'
+exec --no-startup-id xbacklight -set 22
 exec --no-startup-id udiskie --automount --smart-tray
+exec --no-startup-id greenclip daemon>/dev/null
+exec --no-startup-id picom -b
 
 # Multimedia Keys
 # increase volume
@@ -271,3 +271,6 @@ for_window [class="Spotify"] move to workspace $work_music
 # Fix focus issue in jetbrains products
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
 for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
+
+# Workaround to fix title bar in some windows                                                                            
+for_window [all] border pixel 1
