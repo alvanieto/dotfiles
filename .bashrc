@@ -5,17 +5,16 @@
 set -o vi
 
 # Mis atajos
-alias ls='exa'
-#alias ls='ls --color=auto'
+alias ls='lsd --color=auto'
 alias ll='ls -l'
-alias lt='ll -snew'
+alias lt='ll -rt'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias diff='colordiff'
 alias grep='grep --color=auto'
 alias r='fc -s '
-alias vi='nvim'
+alias vi='lvim'
 alias dc='docker-compose'
 
 # Complete after sudo
@@ -25,7 +24,7 @@ complete -cf man
 
 export HISTCONTROL=ignoreboth
 export EDITOR=nvim
-export TERM=xterm
+export TERM=xterm-256color
 
 shopt -s histappend
 export PROMPT_COMMAND='history -a; history -c; history -r'
@@ -37,8 +36,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\[\033[01;37m\]\$?\$(parse_git_branch) \$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi) \[\033[01;37m\] \W \[\033[01;37m\]>\[\033[00m\] "
-#eval "$(starship init bash)"
+PS1="\[\033[01;37m\]\$?\$(parse_git_branch) \$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi) \[\033[01;32m\] \W \[\033[01;37m\]>\[\033[00m\] "
 
 # PATH
 export PATH=/usr/lib64/ccache:$PATH:.:$HOME/utils:/sbin:~/.yarn/bin:~/.local/bin
@@ -56,7 +54,7 @@ xhost + &>/dev/null
 
 # Para virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.10
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.11
 source /usr/bin/virtualenvwrapper.sh
 
 # export PATH=/home/ang/.gem/ruby/2.1.0/bin:$PATH
@@ -64,8 +62,8 @@ source /usr/bin/virtualenvwrapper.sh
 
 export DESKTOP_SESSION=KDE
 export XDG_SESSION_DESKTOP=KDE
-export XDG_CURRENT_DESKTOP=KDE
-export QT_QPA_PLATFORMTHEME=qt5ct
+export XDG_CURRENT_DESKTOP=X-Generic
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Mejorar visualización de aplicaciones java
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
@@ -86,17 +84,23 @@ source /usr/share/git/completion/git-completion.bash
 source /usr/share/bash-completion/bash_completion
 
 # nodejs versions with nvm
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 
 # Configure ssh agent to deploy helpapp
 export AWS_REGION='eu-west-1'
-eval $(keychain  --ignore-missing --eval --quiet id_rsa_bastion id_rsa dfSrvKey)
+# eval $(keychain --ignore-missing --eval --quiet id_rsa_bastion id_rsa dfSrvKey InstanceKeyEu1 InstanceKeyUs1 2>/dev/null)
 
-#. /opt/asdf-vm/asdf.sh
-
-# . /opt/asdf-vm/completions/asdf.bash
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Refresh when recreate the container
 export SIWAPP_TOKEN=d824a2f1f81b4f2bb6aedebbebd5ea44
 
-[ -f /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh ] && source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
+if [[ -z $DISPLAY ]]; then
+    startx
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ang/utils/google-cloud-sdk/path.bash.inc' ]; then . '/home/ang/utils/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ang/utils/google-cloud-sdk/completion.bash.inc' ]; then . '/home/ang/utils/google-cloud-sdk/completion.bash.inc'; fi

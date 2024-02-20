@@ -1,9 +1,12 @@
 [user]
-    email = alvaro@doofinder.com
+  email = alvaro@trexx.io
 	name = Álvaro Nieto
 
 [merge]
-	tool = kdiff3
+	tool = meld
+
+[mergetool "meld"]
+    cmd = $HOME/utils/meld/bin/meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 
 [mergetool "kdiff3"]
     cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" --output "$MERGED"
@@ -13,18 +16,18 @@
     cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [diff]
-	tool = diffuse
+	tool = meld
 
 [difftool]
     prompt = false
 
 [difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+    cmd = $HOME/utils/meld/bin/meld "$LOCAL" "$REMOTE"
 
 [difftool "diffuse"]
     cmd = diffuse "$LOCAL" "$REMOTE"
 
 [core]
 	editor = nvim
-    excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 	attributesfile = /home/ang/.gitattributes

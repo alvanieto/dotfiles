@@ -17,22 +17,26 @@ Plug 'majutsushi/tagbar'
 " Para auto-import python
 Plug 'ludovicchabant/vim-gutentags'
 
-" Autoformating con Black
 Plug 'psf/black', { 'branch': 'stable' }
-
 Plug 'mtdl9/vim-log-highlighting'
 
 " Typescript & Javascript
 Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'prettier/prettier'
 
 " Vue
-Plug 'posva/vim-vue'
+" Plug 'posva/vim-vue'
 
 " Elixir
-Plug 'elixir-editors/vim-elixir'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'elixir-editors/vim-elixir'
 " Plug 'slashmili/alchemist.vim'
-Plug 'elixir-lsp/elixir-ls'
+" Plug 'elixir-lsp/elixir-ls'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'mhanberg/elixir.nvim'
 
 " Quicklist / LocationList
 Plug 'Valloric/ListToggle'
@@ -44,8 +48,8 @@ Plug 'pearofducks/ansible-vim'
 " Syntax for many languages
 Plug 'sheerun/vim-polyglot'
 
-" CoffeScript
-Plug 'kchmck/vim-coffee-script'
+" nim
+Plug 'zah/nim.vim'
 
 call plug#end()
 
@@ -53,10 +57,6 @@ call plug#end()
 " let g:ackprg = 'ag --vimgrep'
 let g:ackprg = 'rg --vimgrep'
 noremap <Leader>a :Ack <cword><cr>
-
-" Force 2 spaces in javascript and html
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 
 " Fix autoread
 set autoread
@@ -80,10 +80,11 @@ set showcmd
 set laststatus=0
 
 "colorscheme base16-ocean
-colorscheme base16-material-darker
+" colorscheme base16-material-darker
 " colorscheme base16-tomorrow-night                                                                  
 " colorscheme base16-onedark                                                                          
 " colorscheme base16-google-dark
+colorscheme base16-default-dark
 
 "colorscheme onedark
 set termguicolors
@@ -123,14 +124,23 @@ map <silent><C-Left> :tabprevious<CR>
 map <silent><C-Right> :tabnext<CR>
 map <silent> <S-Insert> "+p
 imap <silent> <S-Insert> <Esc>"+pa
-noremap <A-1> 1gt
-noremap <A-2> 2gt
-noremap <A-3> 3gt
-noremap <A-4> 4gt
-noremap <A-5> 5gt
-noremap <A-6> 6gt
-noremap <A-7> 7gt
-noremap <A-8> 8gt
+" noremap <A-1> 1gt
+" noremap <A-2> 2gt
+" noremap <A-3> 3gt
+" noremap <A-4> 4gt
+" noremap <A-5> 5gt
+" noremap <A-6> 6gt
+" noremap <A-7> 7gt
+" noremap <A-8> 8gt
+nnoremap <leader>1 1gt 
+nnoremap <leader>2 2gt 
+nnoremap <leader>3 3gt 
+nnoremap <leader>4 4gt 
+nnoremap <leader>5 5gt 
+nnoremap <leader>6 6gt 
+nnoremap <leader>7 7gt 
+nnoremap <leader>8 8gt 
+nnoremap <leader>9 9gt
 set scrolloff=4
 
 " Open terminal, 10 lines height
@@ -158,7 +168,7 @@ map <C-p> :Files<cr>
 
 " type ,p to insert breakpoint. ^[ is at the end.  Insert with ctrl v and then esc
 " (the github web gui doesn't display control characters, but it is there)
-nnoremap <A-S-p> Oimport ipdb;ipdb.set_trace()<esc>
+nnoremap <A-p> Oimport ipdb;ipdb.set_trace()<esc>
 
 " Force python3 interpreter
 let g:pymode_python = 'python3'
@@ -236,8 +246,6 @@ augroup elixir
   autocmd FileType elixir,eelixir nnoremap <c-]> :ALEGoToDefinition<cr>
 augroup END
 
-let g:elixir_fold = "zO"
-
 let g:ale_completion_enabled = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
@@ -251,14 +259,14 @@ let g:pylint_onwrite=0 " No compilar cada vez que se salva, ya decido yo
 let g:pylint_show_rate=0
 
 " prettier con ALE
-"let g:ale_fixers = {
-"\   'javascript': ['prettier'],
-"\   'css': ['prettier'],
-"\}
-"
-let g:prettier#config#print_width = 100
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#prose_wrap = 'never'
+" let g:ale_fixers = {
+" \   'javascript': ['prettier'],
+" \   'css': ['prettier'],
+" \}
+" 
+" let g:prettier#config#print_width = 100
+" let g:prettier#config#single_quote = 'true'
+" let g:prettier#config#prose_wrap = 'never'
 
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
