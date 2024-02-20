@@ -92,9 +92,6 @@ export AWS_REGION='eu-west-1'
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Refresh when recreate the container
-export SIWAPP_TOKEN=d824a2f1f81b4f2bb6aedebbebd5ea44
-
 if [[ -z $DISPLAY ]]; then
     startx
 fi

@@ -6,7 +6,7 @@ icons = "awesome6"
 [[block]]
 block = "weather"
 format = "$icon $weather ($location) $temp, $wind m/s $direction"
-service = { name = "openweathermap", api_key = "6c93f86e8d6ae15fd8c13b3491a1c3c0", city_id = "3117735", units = "metric" }
+service = { name = "openweathermap", api_key = "", city_id = "3117735", units = "metric" }
 interval = 300
 
 [[block]]
